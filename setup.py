@@ -1,12 +1,13 @@
 from setuptools import setup, find_packages
 
 setup(
-  name = 'fcrypt',
+  name = 'fcryptor',
   version = '1.0.0',
   author = 'Omid Karimzade',
   author_email = 'omidekz@gmail.com',
   description = 'python package that encrypt/decrypt files by key.',
-
+  long_description=open('README.md', 'r').read(),
+  long_description_content_type="text/markdown",
   license='MIT',
   keywords = ['file encrypt', 'file cryptography', 'file crypt', 'decrypt', 'fcrypt', 'file-crypt'],
   url = 'https://github.com/omidekz/fcryp',
