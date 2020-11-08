@@ -9,9 +9,9 @@ setup(
   long_description=open('README.md', 'r').read(),
   long_description_content_type="text/markdown",
   license='MIT',
-  keywords = ['file encrypt', 'file cryptography', 'file crypt', 'decrypt', 'fcrypt', 'file-crypt'],
+  keywords = ['file encryptor', 'file cryptography', 'file crypt', 'decrypt', 'fcryptor', 'file-cryptor'],
   url = 'https://github.com/omidekz/fcryp',
-  packages = find_packages(include=['fcrypt', 'fcrypt.*']),
+  packages = find_packages(include=['fcryptor', 'fcryptor.*']),
   install_requires=[
           'cryptography'
   ],
