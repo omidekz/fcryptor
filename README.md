@@ -1,7 +1,7 @@
 # File Cryptor
 
 ## Usage
-```fcryptor.py [-h] -i INPUT [-o OUTPUT] [-si] [-k KEY] [-c | -d]```
+```fcryptor.py [-h] -i INPUT [-o OUTPUT] [-si StdIn] [-k KEY] [-c Crypt | -d Decrypt]```
 
 ```
 optional arguments:
