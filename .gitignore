@@ -1,4 +1,4 @@
 fcryptor.egg-info
 dist
-env
+venv
 __pycache__
