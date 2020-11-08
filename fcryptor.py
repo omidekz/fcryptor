@@ -1,10 +1,10 @@
 from cryptography.fernet import Fernet
 
-class FCryptor:
+class FCryptorBase:
 	def __init__(self, key=None):
 		if not key:
 			key = Fernet.generate_key()
-		FCryptor.__check_type_is(key, bytes)
+		FCryptorBase.__check_type_is(key, bytes)
 		self.key = key.decode()
 		self.__fkey = Fernet(key)
 
@@ -17,9 +17,9 @@ class FCryptor:
 		return True
 
 	def crypt(self, message):
-		FCryptor.__check_type_is(message, bytes)
+		FCryptorBase.__check_type_is(message, bytes)
 		return self.__fkey.encrypt(message).decode()
 
 	def decrypt(self, message):
-		FCryptor.__check_type_is(message, bytes)
+		FCryptorBase.__check_type_is(message, bytes)
 		return self.__fkey.decrypt(message).decode()
