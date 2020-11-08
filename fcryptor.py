@@ -67,6 +67,3 @@ class FCryptor(FCryptorBase):
 			output_file.close()
 		
 		return output
-fc = FCryptor()
-fc.crypt("./test.txt", "o.enc")
-fc.decrypt("o.enc", "oo.enc")
