@@ -1,5 +1,9 @@
 # File Cryptor
 
+## Install
+
+    pip install fcryptor
+
 ## Usage
 ```fcryptor.py [-h] -i INPUT [-o OUTPUT] [-si StdIn] [-k KEY] [-c Crypt | -d Decrypt]```
 
