@@ -84,7 +84,7 @@ if __name__ == "__main__":
 	parser.add_argument("-k", "--key", help="key of/for file")
 	crypt_or_decryot = parser.add_mutually_exclusive_group()
 	crypt_or_decryot.add_argument("-c", "--crypt", action="store_true",help="Crypt File")
-	crypt_or_decryot.add_argument("-d", action="store_true", help="Decrypt File")
+	crypt_or_decryot.add_argument("-d", "--decrypt", action="store_true", help="Decrypt File")
 
 	args = parser.parse_args()
 
