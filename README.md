@@ -6,12 +6,12 @@
 ```
 optional arguments:
     -h, --help              show help message and exit
-    -i , --input INPUT
+    -i , --input
                             Input File/stdin [for stdin pass -si | --stdin]
-    -o OUTPUT, --output OUTPUT
+    -o , --output
                             Output crypt/decrypt result to File
     -si, --stdin            when stdin is true
-    -k KEY, --key KEY       key of/for file
-    -c, --crypt             crypting flag
-    -d                      decrypting flag
+    -k , --key              key of/for file
+    -c , --crypt            crypting flag
+    -d , --decrypt          decrypting flag
 ```
