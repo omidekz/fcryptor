@@ -1,15 +1,15 @@
 from setuptools import setup, find_packages
 
 setup(
-  name = 'fcryptor',
-  version = '1',
+  name = 'fcrypt',
+  version = '1.0.0',
   author = 'Omid Karimzade',
   author_email = 'omidekz@gmail.com',
   description = 'python package that encrypt/decrypt files by key.',
 
   license='MIT',
   keywords = ['file encrypt', 'file cryptography', 'file crypt', 'decrypt', 'fcrypt', 'file-crypt'],
-  url = 'https://github.com/joelbarmettlerUZH/Scrapeasy',
+  url = 'https://github.com/omidekz/fcryp',
   packages = find_packages(include=['fcrypt', 'fcrypt.*']),
   install_requires=[
           'cryptography'
