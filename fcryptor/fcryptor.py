@@ -86,10 +86,17 @@ def main():
 	crypt_or_decryot = parser.add_mutually_exclusive_group(required=True)
 	crypt_or_decryot.add_argument("-c", "--crypt", action="store_true",help="Crypt File")
 	crypt_or_decryot.add_argument("-d", "--decrypt", action="store_true", help="Decrypt File")
-
+	parser.add_argument("-gk", "--genkey", help="generate a key", action="store_ture")
 	args = parser.parse_args()
-	if not (args.crypt or args.decrypt):
-		print ("")
+
+	if args.genkey:
+		print (Fernet.generate_key().decode())
+		return
+	
+	if args.decrypt and not args.key:
+		print ('when pass -d, you have to pass -k [the Key] argument')
+		return
+
 	key = args.key or Fernet.generate_key().decode()
 	show_key = not bool(args.key)
 
