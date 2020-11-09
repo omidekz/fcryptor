@@ -113,7 +113,7 @@ def main():
 	    print("Key is:", key)
 
 	if not args.output:
-	    print ("output:")
+	    print ("{}:".format("encrypt" if args.crypt else "decrypt"))
 	    print(output)
 
 if __name__ == '__main__':
