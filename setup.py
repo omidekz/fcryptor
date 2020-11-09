@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
   name = 'fcryptor',
-  version = '1.0.4',
+  version = '1.0.5',
   author = 'Omid Karimzade',
   author_email = 'omidekz@gmail.com',
   description = 'python package that encrypt/decrypt files by key.',
@@ -11,10 +11,15 @@ setup(
   license='MIT',
   keywords = ['file encryptor', 'file cryptography', 'file crypt', 'decrypt', 'fcryptor', 'file-cryptor'],
   url = 'https://github.com/omidekz/fcryp',
-  packages = find_packages(include=['fcryptor', 'fcryptor.*']),
+  packages = find_packages(),
   install_requires=[
           'cryptography'
   ],
+  entry_points={
+	'console_scripts': [
+		'fcryptor = fcryptor.fcryptor:main'
+	]
+  },
   classifiers=[  # Optional
     # How mature is this project? Common values are
     #   3 - Alpha
