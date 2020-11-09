@@ -79,14 +79,20 @@ class FCryptor(FCryptorBase):
 
 def main():
 	parser = argparse.ArgumentParser()
+	
+	crypt_xor_decryot = parser.add_mutually_exclusive_group(required=True)
+	crypt_xor_decryot.add_argument("-c", "--crypt", action="store_true",help="Crypt File", dest='crypt')
+	crypt_xor_decryot.add_argument("-d", "--decrypt", action="store_true", help="Decrypt File")
+
+	parser.add_argument("-si", "--stdin", help="when stdin is true", action="store_true", default=False)
+
 	parser.add_argument("-i", "--input", help="Input File/stdin [for stdin pass -si | --stdin]", required=True)
 	parser.add_argument("-o", "--output", help="Output File")
-	parser.add_argument("-si", "--stdin", help="when stdin is true", action="store_true")
+
 	parser.add_argument("-k", "--key", help="key of/for file")
-	crypt_or_decryot = parser.add_mutually_exclusive_group(required=True)
-	crypt_or_decryot.add_argument("-c", "--crypt", action="store_true",help="Crypt File")
-	crypt_or_decryot.add_argument("-d", "--decrypt", action="store_true", help="Decrypt File")
+
 	parser.add_argument("-gk", "--genkey", help="generate a key", action="store_true")
+
 	args = parser.parse_args()
 
 	if args.genkey:
