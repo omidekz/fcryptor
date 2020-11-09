@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
   name = 'fcryptor',
-  version = '1.0.5',
+  version = '1.0.6',
   author = 'Omid Karimzade',
   author_email = 'omidekz@gmail.com',
   description = 'python package that encrypt/decrypt files by key.',
