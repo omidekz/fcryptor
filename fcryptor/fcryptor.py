@@ -83,12 +83,13 @@ def main():
 	parser.add_argument("-o", "--output", help="Output File")
 	parser.add_argument("-si", "--stdin", help="when stdin is true", action="store_true")
 	parser.add_argument("-k", "--key", help="key of/for file")
-	crypt_or_decryot = parser.add_mutually_exclusive_group()
+	crypt_or_decryot = parser.add_mutually_exclusive_group(required=True)
 	crypt_or_decryot.add_argument("-c", "--crypt", action="store_true",help="Crypt File")
 	crypt_or_decryot.add_argument("-d", "--decrypt", action="store_true", help="Decrypt File")
 
 	args = parser.parse_args()
-
+	if not (args.crypt or args.decrypt):
+		print ("")
 	key = args.key or Fernet.generate_key().decode()
 	show_key = not bool(args.key)
 
