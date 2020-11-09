@@ -1,10 +1,13 @@
 # File Cryptor
+### Pages
+ - [PYPI](https://pypi.org/project/fcryptor/)
+ - [GitHub](https://github.com/omidekz/fcryptor)
 
 ## Install
 
     pip install fcryptor
 
-## Usage
+## CLI Usage
 ```fcryptor [-h] (-c | -d) [-si] -i INPUT [-o OUTPUT] [-k KEY] [-gk]```
 
 ```
@@ -23,7 +26,7 @@ optional arguments:
     [ -gk | --genkey  ]               generate a key and exit
 ```
 
-# Examples
+# CLI - Examples
 
 	fcryptor -c -si -i Hi
 
@@ -51,3 +54,22 @@ optional arguments:
     #output
     [nothing, just create test_d.txt file]
 ---------------------------------
+
+## Code Usage
+```py
+from fcryptor import FCryptor
+
+fc = FCryptor() # can pass key here, no support custom key yet
+out = fc.crypt(
+    "HI", # or file path
+    None, # or output path
+    from_stdin=True # or False if pass path
+)
+
+fc.decrypt(
+    out,
+    "./test.enc",
+    from_stdin=True
+)
+
+```

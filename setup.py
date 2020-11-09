@@ -10,7 +10,7 @@ setup(
   long_description_content_type="text/markdown",
   license='MIT',
   keywords = ['file encryptor', 'file cryptography', 'file crypt', 'decrypt', 'fcryptor', 'file-cryptor'],
-  url = 'https://github.com/omidekz/fcryp',
+  url = 'https://github.com/omidekz/fcryptor',
   packages = find_packages(),
   install_requires=[
           'cryptography'
